@@ -1,0 +1,230 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: -apple-system, 'Roboto', sans-serif;
+    --color1: #5AC8FA;
+    overflow-x: hidden;
+}
+
+nav{
+    background-image: linear-gradient(-180deg, #0D2545 0%, #19343C 100%);
+    box-shadow: 0 0 0 0 rgba(0,0,0,0.30);
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    z-index: 1;
+    opacity: .98;
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.divLateral{
+    width: 15%;
+    margin-top: 25px;
+    float: left;
+    height: 35px;
+}
+
+.divTitulo{
+    margin-top: 25px;
+    width: 70%;
+    text-align: center;
+    float: left;
+}
+
+nav>div>h1{
+    font-weight: 500;
+    line-height: 30px;
+    font-size: 21px;
+    color: white;
+}
+
+.divLateral>img{
+    height: 26px;
+}
+
+.imgIzq{
+    float: left;
+    margin-left: 15px;
+}
+
+.imgDer{
+    float: right;
+    margin-right: 15px;
+}
+
+body{
+    background: #DFE2E6;
+    overflow-x: hidden;
+}
+
+
+section{
+    width: 100%;
+    padding-top: 80px;
+    z-index: 1;
+}
+
+.fichaInfo{
+    background: #FeFeFe;
+    border: 1px solid #BDBDBD;
+    border-radius: 4px;
+    width: 94%;
+    margin-left: 3%;
+    float: left;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.fichaInfo>input[type="text"]:first-of-type{
+    font-size: 19px;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 5px;
+    opacity: 1;
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.fichaInfo>textarea{
+    border: none;
+    background: none;
+    outline: none;
+    opacity: 0.8;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 400;
+    height: 100px;
+    resize: none;
+    width: 100%;
+    outline: none;
+    text-align: justify;
+}
+
+.fichaInfo>label{
+    width: 40%;
+    height: 40px;
+    border-top: 1px solid #C8C7CC;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+    float: left;
+    font-size: 15px;
+    line-height: 40px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.fichaInfo>input[type="date"]{
+    width: 60%;
+    height: 40px;
+    border-top: 1px solid #C8C7CC;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+    float: left;
+    text-align: left;
+    font-size: 16px;
+    color: #8F8E94;
+    letter-spacing: -0.32px;
+    outline: none;
+    -webkit-appearance:none;
+}
+
+.fichaInfo>select{
+    width: 60%;
+    height: 40px;
+    -webkit-appearance:none;
+    border-top: 1px solid #C8C7CC;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+    float: left;
+    text-align: right;
+    font-size: 16px;
+    color: #8F8E94;
+    letter-spacing: -0.32px;
+    outline: none;
+    border-radius: 0px;
+    background: none;
+}
+
+.fichaMapa{
+    width: 94%;
+    height: 150px;
+    float: left;
+    margin-left: 3%;
+    background: gray;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+#inputImg{
+    height: 0px;
+    width: 0px;
+    float: right;
+    border: none;
+    background: none;
+}
+
+.btnRound{
+    background: #FeFeFe;
+    border: 1px solid #BDBDBD;
+    border-radius: 50%;
+    width: 50px !important;
+    height: 50px !important;
+    float: left;
+    box-sizing: border-box;
+    outline: none;
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+    padding: 0px !important;
+}
+
+#labelImg>img{
+    margin-top: 13px;
+    margin-left: 10.5px;
+    height: 20px;
+}
+
+.botonera{
+    width: 210px;
+    margin-left: calc(50% - 105px);
+    float: left;
+    margin-bottom: 25px;
+}
+
+
+#divFotos{
+    width: 100%;
+    height: 100px;
+    position: relative;
+    float: left;
+    border-top: 1px solid #C8C7CC;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+#galeria>img{
+    height: 80px;
+    border-radius: 4px;
+    float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+/*    box-shadow: 0px 0px 5px 0px rgba(0,0,0,.6);*/
+}
+
+#galeria{
+    width: 100%;
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="17px" viewBox="0 0 24 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="App-UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-SE" transform="translate(-252.000000, -516.000000)" fill="#000000">
+            <g id="Completado" transform="translate(234.000000, 494.000000)">
+                <path d="M26.2121358,35.6485241 L20.3626618,31.7030041 C19.6763125,31.2400556 18.7281,31.4182343 18.2604502,32.1115537 C17.7895399,32.8097068 17.9757823,33.7460521 18.6691519,34.2137358 L25.2560271,38.6566392 C25.3461357,38.7174182 25.4407578,38.7671466 25.5382134,38.8061095 C26.0129444,39.0883862 26.6160874,39.0301343 27.0624042,38.5976839 L41.5457272,24.5643385 C42.1446982,23.9839767 42.1510321,23.0450274 41.5666124,22.4606078 L41.5415176,22.435513 C40.9585929,21.8525882 40.0061294,21.8545305 39.4174698,22.4431901 L26.2121358,35.6485241 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

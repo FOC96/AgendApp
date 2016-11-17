@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="23px" viewBox="0 0 26 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Mobile Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="App-UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-SE" transform="translate(-43.000000, -513.000000)" fill="#000000">
+            <g id="Mensaje" transform="translate(26.000000, 494.000000)">
+                <path d="M29.9811593,19 C37.1500046,19 42.9623187,23.7744181 42.9623187,29.6637326 C42.9623187,35.5530471 37.1500046,40.3274653 29.9811593,40.3274653 C28.8014965,40.3274653 26.4210764,39.8552166 26.4080952,39.8763136 C25.6146219,41.1664775 21.277292,41.9486902 20.8635176,41.9957528 C20.4513657,42.0444382 20.1171009,41.663069 20.4773281,41.4407388 C20.8359326,41.2184087 22.1778599,40.020747 22.5056342,39.2758599 C22.8334085,38.5309728 22.4147661,38.0311357 22.1194447,37.7114347 C19.0072118,35.7640174 17,33.1252669 17,29.6637326 C17,23.7744181 22.8123141,19 29.9811593,19 Z" id="Mobile-Icon"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="150px" height="150px" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <ellipse id="path-1" cx="75" cy="75" rx="75" ry="75"></ellipse>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="150" height="150" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="App-UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon" stroke="#5AC8FA">
+            <use id="Oval" mask="url(#mask-2)" stroke-width="14" xlink:href="#path-1"></use>
+            <path d="M78.4090909,71.5909091 L78.4090909,40.917483 C78.4090909,39.0321394 76.8827889,37.5 75,37.5 C73.1210422,37.5 71.5909091,39.0300592 71.5909091,40.917483 L71.5909091,71.5909091 L40.917483,71.5909091 C39.0321394,71.5909091 37.5,73.1172111 37.5,75 C37.5,76.8789578 39.0300592,78.4090909 40.917483,78.4090909 L71.5909091,78.4090909 L71.5909091,109.082517 C71.5909091,110.967861 73.1172111,112.5 75,112.5 C76.8789578,112.5 78.4090909,110.969941 78.4090909,109.082517 L78.4090909,78.4090909 L109.082517,78.4090909 C110.967861,78.4090909 112.5,76.8827889 112.5,75 C112.5,73.1210422 110.969941,71.5909091 109.082517,71.5909091 L78.4090909,71.5909091 Z" id="Plus-Icon" stroke-width="7"></path>
+        </g>
+    </g>
+</svg>
