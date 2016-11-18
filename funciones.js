@@ -17,3 +17,12 @@ function btnColor(id) {
         document.getElementById('fichaMapa').style.display="block";
     }
 }
+
+function createNew() {
+    window.location.assign('infoTarea.html');
+    document.getElementById('tituloVentana').value = "Nueva Tarea";
+}
+
+function goBack() {
+    window.location.assign('index.html');
+}

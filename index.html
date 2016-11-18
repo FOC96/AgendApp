@@ -2,41 +2,58 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src=""></script>
+    <script type="text/javascript" src="funciones.js"></script>
 </head>
 <body>
-        <nav>
+    <nav>
        <div class="divLateral">
 <!--           <img src="media/back.svg" class="imgIzq">-->
        </div>
         <div class="divTitulo">
-            <h1>Tareas</h1>
+            <h1 id="tituloVentana">Tareas</h1>
         </div>
         <div class="divLateral">
-           <img src="media/add.svg" class="imgDer">
+           <img src="media/add.svg" class="imgDer" onclick="createNew()">
        </div>
     </nav>
     
     
     
     
+    <section>
+       <div class="tareaDiv">
+           <div class="tarea-mini">
+                <div class="borrar"><button></button></div>
+                <input type="text" value="Algo">
+                <p>Aquí va una pequeña descripción sobre la tarea que se va a realizar y estoy poniendo mucho.</p>
+            </div>
+            <div class="eliminarBack"><img src="media/trash.svg"><br>Eliminar</div>
+       </div>
+        
+        
+        <div class="tareaDiv">
+           <div class="tarea-mini">
+                <div class="borrar"><button></button></div>
+                <input type="text" value="Algo">
+                <p>Aquí va una pequeña descripción sobre la tarea que se va a realizar y estoy poniendo mucho.</p>
+            </div>
+            <div class="eliminarBack"><img src="media/trash.svg"><br>Eliminar</div>
+       </div>
+       
+       
+       <div class="tareaDiv">
+           <div class="tarea-mini">
+                <div class="borrar"><button></button></div>
+                <input type="text" value="Algo">
+                <p>Aquí va una pequeña descripción sobre la tarea que se va a realizar y estoy poniendo mucho.</p>
+            </div>
+            <div class="eliminarBack"><img src="media/trash.svg"><br>Eliminar</div>
+       </div>
+    </section>
     
     
-    <div id="contiene-tareas">
-        <div class="tarea-mini">
-            <div class="borrar"><button>X</button></div>
-            <h1>Algo</h1>
-            <p>Algo más</p>
-        </div>
-        <div class="tarea-mini">
-            <div class="borrar"><button>X</button></div>
-            <h1>Algo</h1>
-            <p>Algo más</p>
-        </div>
-    </div>
 </body>
 </html>
