@@ -3,7 +3,6 @@
     margin: 0px;
     font-family: -apple-system, 'Roboto', sans-serif;
     --color1: #5AC8FA;
-    overflow-x: hidden;
 }
 
 nav{
@@ -62,6 +61,7 @@ section{
     width: 100%;
     padding-top: 80px;
     z-index: 1;
+    overflow-x: hidden;
 }
 
 .fichaInfo{
@@ -76,6 +76,7 @@ section{
     padding-right: 10px;
     box-sizing: border-box;
     margin-bottom: 20px;
+    transition: .3s all;
 }
 
 .fichaInfo>input[type="text"]:first-of-type{
@@ -105,13 +106,19 @@ section{
     text-align: justify;
 }
 
-.fichaInfo>label{
-    width: 40%;
+.opcFicha{
     height: 40px;
+    width: 100%;
     border-top: 1px solid #C8C7CC;
     border-bottom: none;
     border-right: none;
     border-left: none;
+    transition: .3s all;
+}
+
+.fichaInfo>div>label{
+    width: 40%;
+    height: 40px;
     float: left;
     font-size: 15px;
     line-height: 40px;
@@ -119,13 +126,9 @@ section{
     box-sizing: border-box;
 }
 
-.fichaInfo>input[type="date"]{
+.fichaInfo>div>input[type="date"]{
     width: 60%;
     height: 40px;
-    border-top: 1px solid #C8C7CC;
-    border-bottom: none;
-    border-right: none;
-    border-left: none;
     float: left;
     text-align: left;
     font-size: 16px;
@@ -133,16 +136,14 @@ section{
     letter-spacing: -0.32px;
     outline: none;
     -webkit-appearance:none;
+    border: none;
 }
 
-.fichaInfo>select{
+.fichaInfo>div>select{
     width: 60%;
     height: 40px;
     -webkit-appearance:none;
-    border-top: 1px solid #C8C7CC;
-    border-bottom: none;
-    border-right: none;
-    border-left: none;
+    border: none;
     float: left;
     text-align: right;
     font-size: 16px;
@@ -153,14 +154,17 @@ section{
     background: none;
 }
 
-.fichaMapa{
-    width: 94%;
-    height: 150px;
+#fichaMapa{
+    width: 96%;
+    height: 160px;
     float: left;
-    margin-left: 3%;
+    margin-left: 2%;
     background: gray;
     border-radius: 6px;
     margin-bottom: 20px;
+    transition: .3s all;
+    display: none;
+    margin-top: 5px;
 }
 
 #inputImg{
@@ -222,9 +226,112 @@ section{
     float: left;
     margin-left: 5px;
     margin-right: 5px;
-/*    box-shadow: 0px 0px 5px 0px rgba(0,0,0,.6);*/
 }
 
 #galeria{
     width: 100%;
 }
+
+.opcFicha>input[type="range"]{
+    -webkit-appearance:none;
+    float: right;
+    height: 30px;
+    width: 50px;
+    margin-top: 5px;
+    margin-right: 10px;
+    background: #FeFeFe;
+    border-radius: 15px;
+    border: 1px solid #E5E5E5;
+    transition: .2s all;
+}
+
+.opcFicha>input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance:none;
+    background: white;
+    width: 26.5px;
+    height: 26.5px;
+    border: none;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.55);
+    border-radius: 50%;
+    margin-top: 1.5px;
+}
+
+.opcFicha>input[type="range"]::-webkit-slider-runnable-track {
+    /* Shape: */
+    -webkit-appearance:none;
+    height: 30px;
+    width: 50px;
+    padding-left: 1px;
+    padding-right: 1px;
+    box-sizing: border-box;
+}
+
+
+/*PASTOR----------LOGIN Y REGISTRO-----------------------------------------------------*/
+
+
+#loginBody{
+    overflow-y: hidden;
+}
+
+.loginInput{
+    width: 70%;
+    height: 40px;
+    border-radius: 20px;
+    margin-left: 15%;
+    float: left;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    outline: none;
+    border: solid 1px black;
+    font-size: 1em;
+}
+
+.loginBtn{
+    width: 70%;
+    height: 40px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    margin-left: 15%;
+    float: left;
+    margin-top: 30px;
+    font-size: 1em;
+}
+
+    .loginBtn:active{
+        background-color: darkgray;
+        color: white;
+    }
+
+.title{
+    font-size: 2em;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.loginBox{
+    width: 100%;
+    height: 140px;
+    margin-top: 90px;
+}
+
+
+.loginNavD{
+    width: 100%;
+}
+
+.loginNav{
+    width: 50%;
+    text-align: center;
+    margin-left: calc(50% - 25%);
+    float: left;
+    text-decoration: none;
+    color: gray;
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+
+

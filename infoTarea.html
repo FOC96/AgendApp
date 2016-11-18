@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
     <link href="style.css" rel="stylesheet" type="text/css">
-<!--    <script type="text/javascript" src="funciones.js"></script>-->
+    <script type="text/javascript" src="funciones.js"></script>
 <!--    <link rel="stylesheet" href="animate.css-master/animate.min.css">-->
 </head>
 <body>
@@ -26,16 +26,24 @@
         <div class="fichaInfo">
             <input type="text" placeholder="Título de la Tarea">
             <textarea placeholder="Descripción breve de la tarea"></textarea>
-            <label for="inputFecha">Fecha</label><input type="date" id="inputFecha">
-            <label for="selectImportant">Importancia</label><select id="selectImportant">
+            <div class="opcFicha">
+               <label for="inputFecha">Fecha</label><input type="date" id="inputFecha">
+            </div>
+            <div  class="opcFicha">
+                <label for="selectImportant">Importancia</label><select id="selectImportant">
                 <option>Baja</option>
                 <option>Normal</option>
                 <option>Alta</option>
             </select>
-            <label for="">Ubicación</label>
-            <div class="fichaMapa">
-
             </div>
+            <div class="opcFicha">
+                <label for="switchUbicacion">Ubicación</label>
+                <input type="range" id="switchUbicacion" max="1" min="0" onchange="btnColor('switchUbicacion')" value="0">
+                <div id="fichaMapa">
+
+                </div>
+            </div>
+            
             <div id="divFotos">
 
     <!--            AQUÍ VAN LAS FOTOS-->
