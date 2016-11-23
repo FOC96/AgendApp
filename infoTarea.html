@@ -7,7 +7,13 @@
     <script type="text/javascript" src="funciones.js"></script>
 <!--    <link rel="stylesheet" href="animate.css-master/animate.min.css">-->
 </head>
-<body>
+<body onload="loadHomework()">
+<!--NUEVO DIV-->
+        <div id="vista2">
+        <h1 id="elementoBorrar" onclick="borrar()">Eliminar</h1>
+        <h2 onclick="cerrar()">Cerrar</h2>
+            <img id="imgMostrar">
+        </div>
     <nav>
        <div class="divLateral">
            <img src="media/back.svg" class="imgIzq" onclick="goBack()">
@@ -22,10 +28,9 @@
     
     
     <section>
-        
         <div class="fichaInfo">
-            <input type="text" placeholder="Título de la Tarea">
-            <textarea placeholder="Descripción breve de la tarea"></textarea>
+            <input type="text" placeholder="Título de la Tarea" id="tituloTarea">
+            <textarea placeholder="Descripción breve de la tarea" id="descripcionTarea"></textarea>
             <div class="opcFicha">
                <label for="inputFecha">Fecha</label><input type="date" id="inputFecha">
             </div>
@@ -45,40 +50,26 @@
             </div>
             
             <div id="divFotos">
-
-    <!--            AQUÍ VAN LAS FOTOS-->
+            <!--AQUÍ VAN LAS FOTOS-->
               <div id="galeria">
-                   <img src="media/e1.jpg">
-                   <img src="media/e2.jpg">
-                   <img src="media/e1.jpg">
-                   <img src="media/e2.jpg">
-                   <img src="media/e1.jpg">
-                   <img src="media/e2.jpg">
-                   <img src="media/e1.jpg">
-                   <img src="media/e2.jpg">
               </div>
-               
-
             </div>
         </div>
-        
         <div class="botonera">
-            <button class="btnRound" id=""><img src="media/trash.svg"></button>
-            <label for="inputImg" id="labelImg" class="btnRound"><img src="media/picture.svg"></label><input type="file" id="inputImg">
-            <button class="btnRound"><img src="media/done.svg"></button>
+            <button class="btnRound" onclick="eliminar()"><img src="media/trash.svg"></button>
+            <label for="inputImg" id="labelImg" class="btnRound"><img src="media/picture.svg"></label>
+            <input type="file" id="inputImg" onchange="encodeImageFileAsURL()">
+            <button class="btnRound" onclick="save()"><img src="media/done.svg"></button>
         </div>
-        
-        
     </section>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 </body>
+
+<script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUWNfJjDYGJk6_GAqfGa62N6cY8ASDMNA">
+</script>
+
+
+
+
+
 </html>

@@ -175,6 +175,7 @@ section{
     float: right;
     border: none;
     background: none;
+    outline: none;
 }
 
 .btnRound{
@@ -207,7 +208,9 @@ section{
 
 #divFotos{
     width: 100%;
-    height: 100px;
+    height: auto;
+    min-height: 80px;
+    max-height: 160px;
     position: relative;
     float: left;
     border-top: 1px solid #C8C7CC;
@@ -219,19 +222,21 @@ section{
     padding-bottom: 10px;
     box-sizing: border-box;
     overflow-x: scroll;
-    overflow-y: hidden;
 }
 
 #galeria>img{
-    height: 80px;
+    height: 40%;
+    width: 20%;
     border-radius: 4px;
     float: left;
     margin-left: 5px;
     margin-right: 5px;
+    margin-top: 5px;
 }
 
 #galeria{
     width: 100%;
+    overflow-x: hidden;
 }
 
 .opcFicha>input[type="range"]{
@@ -359,7 +364,7 @@ section{
     transition: .3s all;
 }
 
-.tarea-mini>input[type="text"]{
+.titulo{
     font-size: 19px;
     font-weight: 500;
     color: #000000;
@@ -375,7 +380,7 @@ section{
     text-overflow: ellipsis;
 }
 
-.tarea-mini>p{
+.descripcion{
     border: none;
     background: none;
     outline: none;
@@ -393,6 +398,7 @@ section{
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical; 
+    text-overflow: ellipsis;
 }
 
 .borrar{
@@ -415,6 +421,11 @@ section{
     border:1px solid black;
     text-align: center;
     margin-top: 15px;
+    z-index: 99999;
+    background-image: url("media/trash.svg");
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .eliminarBack{
@@ -434,4 +445,52 @@ section{
 .eliminarBack>img{
     margin-top: 20px;
     -webkit-filter:invert(100%);
+}
+
+/*--------------------------------Display IMG*/
+.margin{
+    margin-left: 0% !important;
+}
+
+#vista2{
+    margin-left: 100%;
+    z-index: 9999999999;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow-y: hidden;
+    margin-top: 0px;
+    float: left;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#vista2>h1{
+    color: white;
+    width: 100px;
+    text-align: left;
+    font-weight: lighter;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+#vista2>h2{
+    color: white;
+    width: 100px;
+    float: right;
+    text-align: right;
+    font-weight: lighter;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 22px;
+}
+
+#vista2>img{
+    position: relative;
+    float: left;
+    margin-top: 120px;
+    margin-left: 10%;
+    max-width: 80%;
+    border: 3px solid white;
 }

@@ -1,0 +1,75 @@
+<html>
+<head>
+    <title>Inicio</title>   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="funciones.js"></script>
+<!--    <link rel="stylesheet" href="animate.css-master/animate.min.css">-->
+</head>
+<body onload="loadHomework()">
+<!--NUEVO DIV-->
+        <div id="vista2">
+        <h1 id="elementoBorrar" onclick="borrar()">Eliminar</h1>
+        <h2 onclick="cerrar()">Cerrar</h2>
+            <img id="imgMostrar">
+        </div>
+    <nav>
+       <div class="divLateral">
+           <img src="media/back.svg" class="imgIzq" onclick="goBack()">
+       </div>
+        <div class="divTitulo">
+            <h1>Detalles</h1>
+        </div>
+        <div class="divLateral">
+<!--           <img src="media/add.svg" class="imgDer">-->
+       </div>
+    </nav>
+    
+    
+    <section>
+        <div class="fichaInfo">
+            <input type="text" placeholder="Título de la Tarea" id="tituloTarea">
+            <textarea placeholder="Descripción breve de la tarea" id="descripcionTarea"></textarea>
+            <div class="opcFicha">
+               <label for="inputFecha">Fecha</label><input type="date" id="inputFecha">
+            </div>
+            <div  class="opcFicha">
+                <label for="selectImportant">Importancia</label><select id="selectImportant">
+                <option>Baja</option>
+                <option>Normal</option>
+                <option>Alta</option>
+            </select>
+            </div>
+            <div class="opcFicha">
+                <label for="switchUbicacion">Ubicación</label>
+                <input type="range" id="switchUbicacion" max="1" min="0" value="0">
+                <div id="fichaMapa">
+
+                </div>
+            </div>
+            
+            <div id="divFotos">
+            <!--AQUÍ VAN LAS FOTOS-->
+              <div id="galeria">
+              </div>
+            </div>
+        </div>
+        <div class="botonera">
+            <button class="btnRound" onclick="eliminar()"><img src="media/trash.svg"></button>
+            <label for="inputImg" id="labelImg" class="btnRound"><img src="media/picture.svg"></label>
+            <input type="file" id="inputImg" onchange="encodeImageFileAsURL()">
+            <button class="btnRound" onclick="save()"><img src="media/done.svg"></button>
+        </div>
+    </section>
+</body>
+
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDUWNfJjDYGJk6_GAqfGa62N6cY8ASDMNA" type="text/javascript">
+    </script>
+
+
+
+
+
+
+</html>

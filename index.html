@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="funciones.js"></script>
 </head>
-<body>
+<body onload="cargarTareaMini()">
     <nav>
        <div class="divLateral">
 <!--           <img src="media/back.svg" class="imgIzq">-->
@@ -20,37 +20,8 @@
        </div>
     </nav>
     
-    
-    
-    
     <section>
-       <div class="tareaDiv">
-           <div class="tarea-mini">
-                <div class="borrar"><button></button></div>
-                <input type="text" value="Algo">
-                <p>Aquí va una pequeña descripción sobre la tarea que se va a realizar y estoy poniendo mucho.</p>
-            </div>
-            <div class="eliminarBack"><img src="media/trash.svg"><br>Eliminar</div>
-       </div>
-        
-        
-        <div class="tareaDiv">
-           <div class="tarea-mini">
-                <div class="borrar"><button></button></div>
-                <input type="text" value="Algo">
-                <p>Aquí va una pequeña descripción sobre la tarea que se va a realizar y estoy poniendo mucho.</p>
-            </div>
-            <div class="eliminarBack"><img src="media/trash.svg"><br>Eliminar</div>
-       </div>
-       
-       
-       <div class="tareaDiv">
-           <div class="tarea-mini">
-                <div class="borrar"><button></button></div>
-                <input type="text" value="Algo">
-                <p>Aquí va una pequeña descripción sobre la tarea que se va a realizar y estoy poniendo mucho.</p>
-            </div>
-            <div class="eliminarBack"><img src="media/trash.svg"><br>Eliminar</div>
+       <div id="tareaDiv">
        </div>
     </section>
     

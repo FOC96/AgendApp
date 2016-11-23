@@ -1,21 +1,51 @@
-<!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script type="text/javascript" src=script.js></script>
+    <title>LOG IN</title>   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <link href="style1.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="funciones1.js"></script>
+    <link rel="stylesheet" href="animate.css-master/animate.min.css">
 </head>
-<body id ="loginBody">
-	<h1 class="title">Nombre</h1>
-	<div class="loginBox">
-		<input id="user" class="loginInput" type="text" name="usuario" placeholder="Usuario">
-		<input id="password" class="loginInput" type="password" name="password" placeholder="Contraseña">
-	</div>
-	<button class="loginBtn" onclick="login()">Iniciar</button>
-	<div class="loginNavD">
-	<a class="loginNav" href="register.html">Registrate aquí</a>
-	</div>
+
+<body class="fondo1">
+    
+    <div class="medio" id="inicio">
+        
+        <div class="login">
+            <img src="l1.svg" class="logo">
+            <input type="email" class="correo" id="user" placeholder="Usuario">
+            <input type="password" class="contrasena" id="password" placeholder="Contraseña">
+        
+            <button class="btn" id="btnEntrar" onclick="login()">Entrar</button><br>
+            <button id="btnRegistrar" onclick="irARegistro()">Registrar</button>
+        </div>
+        
+    </div>
+    
+    <div class="abajo" id="registro">
+        
+        <div class="login">
+            <h1>Registro</h1>
+            <input type="text" class="usuario" id="nombreReg" placeholder="Usuario">
+            <input type="email" class="correo" id="correoReg" placeholder="Correo">
+            <input type="password" class="contrasena" id="contraReg" placeholder="Contraseña">
+        
+            <button class="btn" id="btnEntrar" onclick="registrar()">Registrarme</button><br>
+            <button id="btnRegistrar" onclick="volverIniciarSesion()">Iniciar Sesión</button>
+        </div>
+        
+    </div>
+   
+    
+    
+    
+    <div class="backIMG">
+        
+    </div>
+    
+    
 </body>
+
+
 </html>
