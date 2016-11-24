@@ -48,8 +48,19 @@ function save(){
         localStorage.setItem('descripcion'+contador, descripcion);
         localStorage.setItem('fecha'+contador, fecha);
         localStorage.setItem('importancia'+contador, importancia);
+        localStorage.setItem('estatusBarra'+contador, document.getElementById('switchUbicacion').value);
         
         if(document.getElementById('switchUbicacion').value == 1){
+            var marker = new google.maps.Marker({
+                position: {lat: latitud, lng: longitud},
+                map: map,
+                draggable: true,
+                animation: google.maps.Animation.DROP,
+            });
+    
+            var position = marker.getPosition();
+            pinLati = position.lat();
+            pinLongi = position.lng();
             localStorage.setItem('lati'+contador, pinLati);
             localStorage.setItem('long'+contador, pinLongi);
         }
@@ -66,19 +77,24 @@ function save(){
 //Cargar la vista previa de la tarea en el index
 function cargarTareaMini(){
     for(i = 0; i< localStorage.getItem('contador'); i++){
+
+
+        prioridad = localStorage.getItem('importancia'+i)
         
         titulo = localStorage.getItem('titulo'+i);
         descripcion = localStorage.getItem('descripcion'+i);
 
-        tarea =  "<div onclick="+'"editar('+i+')"'+" class="+'"tarea-mini"'+"><div class="+'"borrar"'+"><button onclick="+'"eliminar('+i+')"'+"></button></div>";
+        tarea =  "<div onclick="+'"editar('+i+')"'+" class="+'"tarea-mini '+prioridad+'"'+"><div class="+'"borrar"'+"><button onclick="+'"eliminar('+i+')"'+"></button></div>";
         tarea += "<input class="+'"titulo"'+" id="+'"titulo'+i+'"'+" type="+'"text"'+" value='"+titulo+"' disabled>";
         tarea += "<input"+" class="+'"descripcion"'+" id="+'"descripcion'+i+'"'+" type="+'"text"'+"value='"+descripcion+"' disabled>";
-        tarea += "</div><div class="+'"eliminarBack"'+"><img src="+'"media/trash.svg"'+"><br>Eliminar</div>"
+        tarea += "</div><div class="+'"eliminarBack"'+"><img src="+'"media/trash.svg"'+"><br>Eliminar </div>"
+
         if(titulo != null){
             document.getElementById('tareaDiv').innerHTML += tarea;
         }
     }
 }
+
 
 //Cargar la página de edición de la tarea con las variables en la liga
 function editar(num){
@@ -88,7 +104,7 @@ function editar(num){
 
     for(i =0; i< localStorage.getItem('contador'); i++){
         if(localStorage.getItem('descripcion'+i) == descripcion && localStorage.getItem('titulo'+i) == titulo){
-                window.location.assign('verTarea.html?titulo='+titulo+'&descripcion='+descripcion);
+                window.location.assign('verTarea.html?id='+num);
         }
     }
 }
@@ -110,54 +126,24 @@ function loadHomework() {
         params[tmparr[0]] = tmparr[1];
     }
 
-    var tituloOriginal = params['titulo'].split("%20");
-    var titulo = "";
+    var i = params['id'];
 
-    var descripcionOriginal = params['descripcion'].split("%20");
-    var descripcion = "";
-
-    for(j = 0; j < tituloOriginal.length; j++){
-        titulo += tituloOriginal[j];
-        if(j+1 < tituloOriginal.length){
-            titulo += " ";
-        }
-    }
-
-    for(j = 0; j < descripcionOriginal.length; j++){
-        descripcion += descripcionOriginal[j];
-        if(j+1 < descripcionOriginal.length){
-            descripcion += " ";
-        }
-    }
-
-    for(i = 0; i < localStorage.getItem('contador'); i++){
-        if(localStorage.getItem('titulo'+i) == titulo && descripcion == localStorage.getItem('descripcion'+i)){
             document.getElementById('tituloTarea').value = localStorage.getItem('titulo'+i);
             document.getElementById('descripcionTarea').value =localStorage.getItem('descripcion'+i);
             document.getElementById('inputFecha').value = localStorage.getItem('fecha'+i);
             document.getElementById('selectImportant').value = localStorage.getItem('importancia'+i);
+            document.getElementById('switchUbicacion').value = localStorage.getItem('estatusBarra'+i);
             
-            if(localStorage.getItem('lati'+i)){
-                alert('si hay');
+            if(localStorage.getItem('lati'+i) && localStorage.getItem('estatusBarra'+i) != 0){
                 document.getElementById('fichaMapa').style.display="block";
                 document.getElementById('switchUbicacion').style.background = "var(--color1)";
                 document.getElementById('switchUbicacion').style.borderColor = "var(--color1)";
                 document.getElementById('switchUbicacion').value=1;
                 showMap(parseFloat(localStorage.getItem('lati'+i)), parseFloat(localStorage.getItem('long'+i)));
             }
-        }
-    }
-
-    
-     for(i = 0; i<localStorage.getItem('contador'); i++){
-            if(titulo == localStorage.getItem('titulo'+i) && descripcion == localStorage.getItem('descripcion'+i)){
-                break;
-            }
-    }
 
     for(j = 0; j< localStorage.getItem('contadorImg'+i); j++){
          srcData = localStorage.getItem('img'+i+'.'+j);
-         //Nueva linea
          if(srcData != null){
              var newImage = document.createElement('img');
              newImage.src = srcData;
@@ -207,31 +193,6 @@ function encodeImageFileAsURL() {
       }
       fileReader.readAsDataURL(fileToLoad);
     }
-    location.reload(true);
-  }
-
-//Eliminar la nota y recorrer los elementos del localStorage
-function eliminar(){
-    titulo = document.getElementById('tituloTarea').value;
-    descripcion = document.getElementById('descripcionTarea').value;
-    contador = localStorage.getItem('contador');
-    
-    for(i = 0; i<contador; i++){
-        if(titulo == localStorage.getItem('titulo'+i) && descripcion == localStorage.getItem('descripcion'+i)){
-            break;
-        }
-    }
-    localStorage.removeItem('titulo'+i);
-    localStorage.removeItem('descripcion'+i);
-    localStorage.removeItem('fecha'+i);
-    localStorage.removeItem('importancia'+i);
-
-    for(j = 0; j<localStorage.getItem('contadorImg'+i); j++){
-    	localStorage.removeItem('img'+i+'.'+j);
-    }
-
-    localStorage.removeItem('contadorImg'+i);
-    window.location.assign('index.html');
   }
 
 function eliminar(i){
@@ -243,6 +204,9 @@ function eliminar(i){
     localStorage.removeItem('descripcion'+i);
     localStorage.removeItem('fecha'+i);
     localStorage.removeItem('importancia'+i);
+    localStorage.removeItem('lati'+i);
+    localStorage.removeItem('long'+i);
+    localStorage.removeItem('estatusBarra'+i);
 
     for(j = 0; j<localStorage.getItem('contadorImg'+i); j++){
     	localStorage.removeItem('img'+i+'.'+j);
@@ -274,6 +238,73 @@ function borrar(i, contadorImg){
 }
 
 
+//Actualizar una tarea ya guardada
+
+function actualizar(){
+    //Sacar variables
+    var paramstr = window.location.search.substr(1);
+    //Dividirlas en caso de ser más de 1
+    var paramarr = paramstr.split ("&");
+    //Declarrar el arreglo que almacenerá las variables
+    var params = {};
+
+    //Separamos el nombre de las variables de su valor.
+    for ( var i = 0; i < paramarr.length; i++) {
+        var tmparr = paramarr[i].split("=");
+        //Asignamos el valor a nuestra varible
+        params[tmparr[0]] = tmparr[1];
+    }
+    
+    i = params['id'];
+
+//    var tituloOriginal = params['titulo'].split("%20");
+//    var titulo = "";
+//
+//    var descripcionOriginal = params['descripcion'].split("%20");
+//    var descripcion = "";
+//
+//    for(j = 0; j < tituloOriginal.length; j++){
+//        titulo += tituloOriginal[j];
+//        if(j+1 < tituloOriginal.length){
+//            titulo += " ";
+//        }
+//    }
+//
+//    for(j = 0; j < descripcionOriginal.length; j++){
+//        descripcion += descripcionOriginal[j];
+//        if(j+1 < descripcionOriginal.length){
+//            descripcion += " ";
+//        }
+//    }
+//
+//    for(i = 0; i < localStorage.getItem('contador'); i++){
+//        if(localStorage.getItem('titulo'+i) == tituloOriginal && descripcionOriginal == localStorage.getItem('descripcion'+i)){
+//            break;
+//        }
+//    }
+
+    titulo = document.getElementById('tituloTarea').value;
+    descripcion = document.getElementById('descripcionTarea').value;
+    fecha = document.getElementById('inputFecha').value;
+    importancia = document.getElementById('selectImportant').value;
+
+
+    if(titulo != "" && descripcion != "" && fecha != ""){
+        localStorage.setItem('titulo'+i, titulo);
+        localStorage.setItem('descripcion'+i, descripcion);
+        localStorage.setItem('fecha'+i, fecha);
+        localStorage.setItem('importancia'+i, importancia);
+        localStorage.setItem('estatusBarra'+i, document.getElementById('switchUbicacion').value);
+
+        alert('Tarea guardada con éxito');
+        window.location.assign('index.html');
+    }
+    else{
+        alert('Los campos deben de estar completos');
+    }
+}
+
+
 function localizar(){
     navigator.geolocation.getCurrentPosition(ubicacion);
 }
@@ -296,8 +327,7 @@ function initMap() {
   var marker = new google.maps.Marker({
     position: {lat: latitud, lng: longitud},
     map: map,
-    draggable: true,
-//    icon: 'geoPin1.svg',
+    draggable: false,
     animation: google.maps.Animation.DROP,
   });
     
@@ -321,7 +351,17 @@ function showMap(latitud1, longitud1) {
     position: {lat: latitud1, lng: longitud1},
     map: map2,
     draggable: false,
-//    icon: 'geoPin1.svg',
     animation: google.maps.Animation.DROP,
   });
 }
+
+function cerrar(){
+    window.location.assign("login.html");
+}
+
+
+
+
+
+
+

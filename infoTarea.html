@@ -7,7 +7,7 @@
     <script type="text/javascript" src="funciones.js"></script>
 <!--    <link rel="stylesheet" href="animate.css-master/animate.min.css">-->
 </head>
-<body onload="loadHomework()">
+<body>
 <!--NUEVO DIV-->
         <div id="vista2">
         <h1 id="elementoBorrar" onclick="borrar()">Eliminar</h1>
@@ -58,7 +58,7 @@
         <div class="botonera">
             <button class="btnRound" onclick="eliminar()"><img src="media/trash.svg"></button>
             <label for="inputImg" id="labelImg" class="btnRound"><img src="media/picture.svg"></label>
-            <input type="file" id="inputImg" onchange="encodeImageFileAsURL()">
+            <input type="file" id="inputImg" onchange="encodeImageFileAsURL()" accept="image/*">
             <button class="btnRound" onclick="save()"><img src="media/done.svg"></button>
         </div>
     </section>

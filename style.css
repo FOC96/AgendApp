@@ -362,6 +362,7 @@ section{
     box-sizing: border-box;
     margin-bottom: 10px;
     transition: .3s all;
+   /* border-right: 10px solid #Ff3B30;*/ /*amarillo:  #FFC107  verde :  #689F38*/
 }
 
 .titulo{
@@ -449,6 +450,7 @@ section{
 
 /*--------------------------------Display IMG*/
 .margin{
+    display: block;
     margin-left: 0% !important;
 }
 
@@ -462,6 +464,7 @@ section{
     margin-top: 0px;
     float: left;
     background-color: rgba(0, 0, 0, 0.8);
+    display: hidden;
 }
 
 #vista2>h1{
@@ -494,3 +497,27 @@ section{
     max-width: 80%;
     border: 3px solid white;
 }
+
+/*CERRAR SESION*/
+
+#cerrarSesion{
+    margin-left: 10px;
+    filter: invert(100%);
+}
+
+
+.Baja{
+    border-right: 10px solid #689F38;
+}
+
+.Normal{
+    border-right: 10px solid #FFC107;
+}
+
+.Alta{
+    border-right: 10px solid #Ff3B30;
+}
+
+
+
+

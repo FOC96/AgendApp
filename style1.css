@@ -85,6 +85,12 @@ button:active{
     background-repeat: no-repeat;
 }
 
+#user{
+    background: url(imgs/user.svg) !important;
+    background-size: 25px !important;
+    background-repeat: no-repeat !important;
+}
+
 .btn{
     border-radius: 20px;
     background: none;
@@ -495,3 +501,12 @@ button:active{
     margin-top: 15px;
     color: white;
 }
+
+#sU{
+    height: 25px;
+    width: 25px;
+}
+
+
+
+

@@ -9,7 +9,7 @@
 </head>
 <body onload="loadHomework()">
 <!--NUEVO DIV-->
-        <div id="vista2">
+        <div id="vista2" onclick="cerrar()">
         <h1 id="elementoBorrar" onclick="borrar()">Eliminar</h1>
         <h2 onclick="cerrar()">Cerrar</h2>
             <img id="imgMostrar">
@@ -43,7 +43,7 @@
             </div>
             <div class="opcFicha">
                 <label for="switchUbicacion">Ubicación</label>
-                <input type="range" id="switchUbicacion" max="1" min="0" value="0">
+                <input type="range" id="switchUbicacion" max="1" min="0" onchange="btnColor('switchUbicacion')" value="0">
                 <div id="fichaMapa">
 
                 </div>
@@ -58,8 +58,8 @@
         <div class="botonera">
             <button class="btnRound" onclick="eliminar()"><img src="media/trash.svg"></button>
             <label for="inputImg" id="labelImg" class="btnRound"><img src="media/picture.svg"></label>
-            <input type="file" id="inputImg" onchange="encodeImageFileAsURL()">
-            <button class="btnRound" onclick="save()"><img src="media/done.svg"></button>
+            <input type="file" id="inputImg" onchange="encodeImageFileAsURL()"  accept="image/*">
+            <button class="btnRound" onclick="actualizar()"><img src="media/done.svg"></button>
         </div>
     </section>
 </body>
