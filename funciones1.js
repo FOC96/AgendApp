@@ -117,6 +117,7 @@ function login(){
         setTimeout(getNormalAgain, 500, 'user');
         mistakesIn('password');
         setTimeout(getNormalAgain, 500, 'password');
+        navigator.vibrate(1000);
     }
 
     contador = localStorage.getItem('contador');
@@ -130,6 +131,7 @@ function login(){
             }else{
                 mistakesIn('password');
                 setTimeout(getNormalAgain, 500, 'password');
+                navigator.vibrate(1000);
             }
         }
     }
