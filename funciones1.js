@@ -127,7 +127,7 @@ function login(){
     for (var i = 0; i  <= contador; i++) {
         if (!localStorage.getItem('user')){
             if(localStorage.getItem('password'+i) == password && user == localStorage.getItem('user'+i)){
-                window.location.assign('infoTarea.html');
+                window.location.assign('indexTareas.html');
             }else{
                 mistakesIn('password');
                 setTimeout(getNormalAgain, 500, 'password');

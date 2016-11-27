@@ -1,30 +1,50 @@
-<!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
+    <title>LOG IN</title>   
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="funciones.js"></script>
+    <link href="style1.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="animate.css-master/animate.min.css">
 </head>
-<body onload="cargarTareaMini()">
-    <nav>
-       <div class="divLateral">
-           <img src="media/exit.svg" class="imgIzq" onclick="cerrar()">
-       </div>
-        <div class="divTitulo">
-            <h1 id="tituloVentana">Tareas</h1>
+
+<body class="fondo1">
+    
+    <div class="medio" id="inicio">
+        
+        <div class="login">
+            <img src="l1.svg" class="logo">
+            <input type="email" class="correo" id="user" placeholder="Usuario">
+            <input type="password" class="contrasena" id="password" placeholder="Contraseña">
+        
+            <button class="btn" id="btnEntrar" onclick="login()">Entrar</button><br>
+            <button id="btnRegistrar" onclick="irARegistro()">Registrar</button>
         </div>
-        <div class="divLateral">
-           <img src="media/add.svg" class="imgDer" onclick="createNew()">
-       </div>
-    </nav>
+        
+    </div>
     
-    <section>
-       <div id="tareaDiv">
-       </div>
-    </section>
+    <div class="abajo" id="registro">
+        
+        <div class="login">
+            <h1>Registro</h1>
+            <input type="text" class="usuario" id="nombreReg" placeholder="Usuario">
+            <input type="email" class="correo" id="correoReg" placeholder="Correo">
+            <input type="password" class="contrasena" id="contraReg" placeholder="Contraseña">
+        
+            <button class="btn" id="btnEntrar" onclick="registrar()">Registrarme</button><br>
+            <button id="btnRegistrar" onclick="volverIniciarSesion()">Iniciar Sesión</button>
+        </div>
+        
+    </div>
+   
     
     
+    
+    <div class="backIMG">
+        
+    </div>
+    
+    <script type="text/javascript" src="funciones1.js"></script>
 </body>
+
+
 </html>

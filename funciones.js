@@ -27,7 +27,7 @@ function createNew() {
 }
 
 function goBack() {
-    window.location.assign('index.html');
+    window.location.assign('indexTareas.html');
 }
 
 //Guardar la tarea en el localStorage
@@ -67,7 +67,7 @@ function save(){
 
         alert('Tarea guardada con éxito');
         localStorage.setItem('contador', ++contador);
-        window.location.assign('index.html');
+        window.location.assign('indexTareas.html');
     }
     else{
         alert('Los campos deben de estar completos');
@@ -213,7 +213,7 @@ function eliminar(i){
     }
 
     localStorage.removeItem('contadorImg'+i);
-    window.location.assign('index.html');
+    window.location.assign('indexTareas.html');
   }
 
 /*NUEVAS FUNCIONES*/
@@ -297,7 +297,7 @@ function actualizar(){
         localStorage.setItem('estatusBarra'+i, document.getElementById('switchUbicacion').value);
 
         alert('Tarea guardada con éxito');
-        window.location.assign('index.html');
+        window.location.assign('indexTareas.html');
     }
     else{
         alert('Los campos deben de estar completos');
@@ -356,12 +356,46 @@ function showMap(latitud1, longitud1) {
 }
 
 function cerrar(){
-    window.location.assign("login.html");
+    window.location.assign("index.html");
+}
+
+function cancelarTarea() {
+    window.location.assign('indexTareas.html')
 }
 
 
+function eliminarTarea() {
+    //Sacar variables
+    var paramstr = window.location.search.substr(1);
+    //Dividirlas en caso de ser más de 1
+    var paramarr = paramstr.split ("&");
+    //Declarrar el arreglo que almacenerá las variables
+    var params = {};
 
+    //Separamos el nombre de las variables de su valor.
+    for ( var i = 0; i < paramarr.length; i++) {
+        var tmparr = paramarr[i].split("=");
+        //Asignamos el valor a nuestra varible
+        params[tmparr[0]] = tmparr[1];
+    }
+    
+    i = params['id'];
+    
+    localStorage.removeItem('titulo'+i);
+    localStorage.removeItem('descripcion'+i);
+    localStorage.removeItem('fecha'+i);
+    localStorage.removeItem('importancia'+i);
+    localStorage.removeItem('lati'+i);
+    localStorage.removeItem('long'+i);
+    localStorage.removeItem('estatusBarra'+i);
 
+    for(j = 0; j<localStorage.getItem('contadorImg'+i); j++){
+    	localStorage.removeItem('img'+i+'.'+j);
+    }
 
+    localStorage.removeItem('contadorImg'+i);
+    
+    window.location.assign('indexTareas.html');
+}
 
 

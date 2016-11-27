@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="funciones.js"></script>
+</head>
+<body onload="cargarTareaMini()">
+    <nav>
+       <div class="divLateral">
+           <img src="media/exit.svg" class="imgIzq" onclick="cerrar()">
+       </div>
+        <div class="divTitulo">
+            <h1 id="tituloVentana">Tareas</h1>
+        </div>
+        <div class="divLateral">
+           <img src="media/add.svg" class="imgDer" onclick="createNew()">
+       </div>
+    </nav>
+    
+    <section>
+       <div id="tareaDiv">
+       </div>
+    </section>
+    
+    
+</body>
+</html>

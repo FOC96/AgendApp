@@ -507,15 +507,15 @@ section{
 
 
 .Baja{
-    border-right: 10px solid #689F38;
+    border-right: 8px solid #4CD964;
 }
 
 .Normal{
-    border-right: 10px solid #FFC107;
+    border-right: 8px solid #FFCC00;
 }
 
 .Alta{
-    border-right: 10px solid #Ff3B30;
+    border-right: 8px solid #FF3B30;
 }
 
 
