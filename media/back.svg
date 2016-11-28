@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="13px" height="21px" viewBox="0 0 13 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+<svg width="29px" height="47px" viewBox="0 0 29 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.1 (35376) - http://www.bohemiancoding.com/sketch -->
     <title>Back</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="App-UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="iPhone-SE" transform="translate(-11.000000, -24.000000)" fill="#5AC8FA">
-            <g id="Back-Arrow-Blue" transform="translate(11.000000, 24.000000)">
-                <path d="M11.65892,0.692472586 C11.2605396,0.310030537 10.6102482,0.314244144 10.2199428,0.688934326 L0.717645732,9.81106567 C0.321300938,10.1915536 0.327340299,10.8142441 0.717645732,11.1889343 L10.2199428,20.3110657 C10.6162876,20.6915536 11.2598403,20.6906408 11.65892,20.3075274 L12.2786686,19.7125736 C12.6770489,19.3301315 12.6841277,18.7168661 12.273707,18.3228654 L4.12482294,10.5 L12.273707,2.67713461 C12.6748276,2.29206201 12.6777482,1.67053977 12.2786686,1.2874264 L11.65892,0.692472586 Z" id="Back"></path>
+    <g id="Icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-3" transform="translate(0.000000, -30.000000)" fill="#1C769A">
+            <g id="Group-2" transform="translate(0.000000, 30.000000)">
+                <g id="back">
+                    <g id="Back">
+                        <g id="App-UI">
+                            <g id="iPhone-SE">
+                                <g id="Back-Arrow-Blue">
+                                    <path d="M25.9654003,0.793930917 C25.0513528,-0.0780495344 23.5593184,-0.0684423718 22.6637982,0.785863568 L0.861643389,21.5846231 C-0.0477336285,22.4521481 -0.033876865,23.8719029 0.861643389,24.7262089 L22.6637982,45.5249685 C23.5731753,46.3924934 25.0497483,46.3904122 25.9654003,45.5169011 L27.387357,44.1603868 C28.3014043,43.2884063 28.317646,41.890141 27.3759731,40.9918064 L8.67910106,23.155416 L27.3759731,5.31902561 C28.2963077,4.44104742 28.3030088,3.02395627 27.387357,2.15044518 L25.9654003,0.793930917 Z" id="Back"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
             </g>
         </g>
     </g>

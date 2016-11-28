@@ -2,7 +2,7 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
 console.log(StatusBar);
-StatusBar.styleLightContent
+StatusBar.styleLightContent;
 }
 
 
@@ -228,7 +228,7 @@ function ampliarImg(i, contadorImg){
     hola.src = src; 
 }
 
-function cerrar(){
+function cerrarGaleria(){
     document.getElementById('vista2').classList.remove('margin');
 }
 

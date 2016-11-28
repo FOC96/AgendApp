@@ -6,14 +6,16 @@
 }
 
 nav{
-    background-image: linear-gradient(-180deg, #0D2545 0%, #19343C 100%);
-    box-shadow: 0 0 0 0 rgba(0,0,0,0.30);
+    background-image: linear-gradient(-180deg, #0D2545 100%, #19343C 0%);
+    box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.30);
     position: fixed;
     width: 100%;
     height: 65px;
     z-index: 2;
     opacity: .98;
     -webkit-backdrop-filter: blur(10px);
+    /* Rectangle: */
+background-image: linear-gradient(-180deg, #0B1029 0%, #05151B 100%);
 }
 
 .divLateral{
@@ -459,7 +461,7 @@ section{
     z-index: 9999999999;
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     overflow-y: hidden;
     margin-top: 0px;
     float: left;

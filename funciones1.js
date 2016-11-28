@@ -1,3 +1,5 @@
+
+
 function detectswipe(el,func) {
       swipe_det = new Object();
       swipe_det.sX = 0;
@@ -140,11 +142,11 @@ function login(){
 
 /* Hay errores en los campos (recibe parámetros[id]) */
 function mistakesIn(x){
-    document.getElementById(x).style.color="var(--specialColor)";
+    document.getElementById(x).style.color="var(--color3)";
     document.getElementById(x).style.transition=".1s all";
     document.getElementById(x).classList.add('animated');
     document.getElementById(x).classList.add('shake');
-    document.getElementById(x).style.borderBottomColor="var(--specialColor)";
+    document.getElementById(x).style.borderBottomColor="var(--color3)";
 }
 
 /* Vuelve a la normalidad (recibe parámetros[id]) */

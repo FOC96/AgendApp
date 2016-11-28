@@ -8,12 +8,6 @@
 <!--    <link rel="stylesheet" href="animate.css-master/animate.min.css">-->
 </head>
 <body>
-<!--NUEVO DIV-->
-        <div id="vista2">
-        <h1 id="elementoBorrar" onclick="borrar()">Eliminar</h1>
-        <h2 onclick="cerrar()">Cerrar</h2>
-            <img id="imgMostrar">
-        </div>
     <nav>
        <div class="divLateral">
            <img src="media/back.svg" class="imgIzq" onclick="goBack()">
@@ -26,7 +20,12 @@
        </div>
     </nav>
     
-    
+    <div id="vista2">
+        <h1 id="elementoBorrar" onclick="borrar()">Eliminar</h1>
+        <h2 onclick="cerrarGaleria()">Cerrar</h2>
+        <img id="imgMostrar">
+    </div>
+        
     <section>
         <div class="fichaInfo">
             <input type="text" placeholder="Título de la Tarea" id="tituloTarea">
