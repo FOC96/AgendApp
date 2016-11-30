@@ -1,26 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="150px" height="150px" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 41.1 (35376) - http://www.bohemiancoding.com/sketch -->
+<svg width="99px" height="99px" viewBox="0 0 99 99" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
     <title>add</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <circle id="path-1" cx="75" cy="75" r="75"></circle>
+        <path d="M79,70 L79,29.5110776 C79,27.022424 76.9852813,25 74.5,25 C72.0197757,25 70,27.0196781 70,29.5110776 L70,70 L29.5110776,70 C27.022424,70 25,72.0147187 25,74.5 C25,76.9802243 27.0196781,79 29.5110776,79 L70,79 L70,119.488922 C70,121.977577 72.0147187,124 74.5,124 C76.9802243,124 79,121.980322 79,119.488922 L79,79 L119.488922,79 C121.977577,79 124,76.9852813 124,74.5 C124,72.0197757 121.980322,70 119.488922,70 L79,70 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="99" height="99" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
     </defs>
     <g id="Icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="add">
+        <g id="add" transform="translate(-25.000000, -25.000000)" stroke-width="11" stroke="#5AC8FA">
             <g id="Icon">
                 <g id="App-UI">
                     <g id="Icon">
-                        <g id="Oval-Clipped">
-                            <mask id="mask-2" fill="white">
-                                <use xlink:href="#path-1"></use>
-                            </mask>
-                            <g id="path-1"></g>
-                            <g id="Oval" mask="url(#mask-2)" stroke-width="14" stroke="#1C769A">
-                                <circle id="path-1" cx="75" cy="75" r="75"></circle>
-                            </g>
-                        </g>
-                        <path d="M78.4090909,71.5909091 L78.4090909,40.917483 C78.4090909,39.0321394 76.8827889,37.5 75,37.5 C73.1210422,37.5 71.5909091,39.0300592 71.5909091,40.917483 L71.5909091,71.5909091 L40.917483,71.5909091 C39.0321394,71.5909091 37.5,73.1172111 37.5,75 C37.5,76.8789578 39.0300592,78.4090909 40.917483,78.4090909 L71.5909091,78.4090909 L71.5909091,109.082517 C71.5909091,110.967861 73.1172111,112.5 75,112.5 C76.8789578,112.5 78.4090909,110.969941 78.4090909,109.082517 L78.4090909,78.4090909 L109.082517,78.4090909 C110.967861,78.4090909 112.5,76.8827889 112.5,75 C112.5,73.1210422 110.969941,71.5909091 109.082517,71.5909091 L78.4090909,71.5909091 Z" id="Plus-Icon" stroke="#1C769A" stroke-width="7"></path>
+                        <use id="Plus-Icon" mask="url(#mask-2)" xlink:href="#path-1"></use>
                     </g>
                 </g>
             </g>
