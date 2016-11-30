@@ -9,11 +9,13 @@
 </head>
 <body onload="loadHomework()">
 <!--NUEVO DIV-->
-        <div id="vista2" onclick="cerrar()">
-        <h1 id="elementoBorrar" onclick="borrar()">Eliminar</h1>
-        <h2 onclick="cerrar()">Cerrar</h2>
-            <img id="imgMostrar">
+        <div id="vista2" onclick="hideGaleria()">
+            <h1 id="elementoBorrar" onclick="borrar()"><img src="media/delete.svg"></h1>
+            <h2 onclick="hideGaleria()"><img src="media/close.svg"></h2>
+                <img id="imgMostrar">
         </div>
+        
+        
     <nav>
        <div class="divLateral">
            <img src="media/back.svg" class="imgIzq" onclick="goBack()">

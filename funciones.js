@@ -228,7 +228,7 @@ function ampliarImg(i, contadorImg){
     hola.src = src; 
 }
 
-function cerrarGaleria(){
+function hideGaleria(){
     document.getElementById('vista2').classList.remove('margin');
 }
 

@@ -99,9 +99,11 @@ function registrar(){
                     //INCREMENTAR EL CONTADOR
                     contador++
                     localStorage.setItem('contador',contador);
-                    alert('Registro exitoso')
-                    // window.location.assign('login.html')
-                    volverIniciarSesion()
+                    alert('Registro exitoso');
+                    volverIniciarSesion();
+                    vaciarCampo('nombreReg');
+                    vaciarCampo('correoReg');
+                    vaciarCampo('contraReg');
                 }else{
                     mistakesIn('nombreReg');
                     setTimeout(getNormalAgain, 500, 'nombreReg');
@@ -115,11 +117,11 @@ function registrar(){
 function login(){
 
     if (document.getElementById('user').value == "" && document.getElementById('password').value == "") {
+        
         mistakesIn('user');
         setTimeout(getNormalAgain, 500, 'user');
         mistakesIn('password');
         setTimeout(getNormalAgain, 500, 'password');
-        navigator.vibrate(1000);
     }
 
     contador = localStorage.getItem('contador');
@@ -131,9 +133,11 @@ function login(){
             if(localStorage.getItem('password'+i) == password && user == localStorage.getItem('user'+i)){
                 window.location.assign('indexTareas.html');
             }else{
+                
+                mistakesIn('user');
+                setTimeout(getNormalAgain, 500, 'user');
                 mistakesIn('password');
                 setTimeout(getNormalAgain, 500, 'password');
-                navigator.vibrate(1000);
             }
         }
     }
@@ -161,6 +165,8 @@ function getNormalAgain(x){
 
 
 
-
+function vaciarCampo(id){
+    document.getElementById(id).value="";
+}
 
 
